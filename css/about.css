@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+
+#container .about{
+	color: #666;
+	font-size: 20px;
+}
+#container .about p{
+	line-height: 2;
+	margin: 20px 0;
+}
+#container .about address{
+	line-height: 1.6;
+	margin: 20px 0
+	font-style:normal;
+}
