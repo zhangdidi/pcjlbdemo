@@ -9,8 +9,8 @@
 <body>
 	<nav id="nav">
 		<section>
-			<img src="img\3.jpg">
-				<h1>张三旅行社</h1>
+			<img src="img\logo.jpg">
+				<h1>zender旅行社</h1>
 				<ul>
 					<li><a  href="index.html">首页</a></li>
 					<li class="active"><a href="information.html">旅行咨询</a></li>
@@ -34,7 +34,7 @@
 				<h2>景点推荐</h2>
 				<div class="tag">
 					<ul>
-						<li><a href="#">曼谷(12)</a></li>
+						<li class="actives"><a href="#">曼谷(12)</a></li>
 						<li><a href="#">东京(5)</a></li>
 						<li><a href="#">土耳其(4)</a></li>
 						<li><a href="#">西双版纳</a></li>
@@ -96,7 +96,7 @@
 			<div class="sidebox treasure">
 				<h2>旅游百宝箱</h2>
 				<div class="box">
-					<a href="#">天气预报</a>
+					<a class="actives-box" href="#">天气预报</a>
 					<a href="#">火车票查询</a>
 					<a href="#">航空查询</a>
 					<a href="#">地铁线路查询</a>
@@ -106,8 +106,8 @@
 		</aside>
 		<div class="list information">
 			<div class="infor">
-				<ul class="left">
-					<li><a class="selected" href="#">限时特价</a></li>
+				<ul class="left clearfix">
+					<li class="selected"><a href="#">限时特价</a></li>
 					<li><a href="#">热门推荐</a></li>
 				</ul>
 				<ul class="right">
@@ -260,6 +260,80 @@
 					</article>
 				</figcaption>
 			</figure>
+			<div class="hide-tour" style="display: none;">
+				<figure class="tour">
+				<img src="img/4.jpg" alt="曼谷-芭提亚6日游"/>
+				<figcaption>
+					<article>
+						<header>
+							<hgroup>
+								<h2>曼谷-芭提亚6日游</h2>
+								<h3>包团特惠，超丰富景点，升级1万五一，无自费，赠送600元成人卷...</h3>
+							</hgroup>
+						</header>
+						<ol>
+							<li><mark>交通</mark>：春秋航空，杭州出发，无需转机</li>
+							<li><mark>团期</mark>：11/01，11/03，11/08...</li>
+						</ol>
+						<div class="buy">
+							<div class="price"> ￥ <strong>2864</strong><s>￥ 3980</s></div>
+							<div class="reserve"><a href="#">立即抢购</a></div>
+						</div>
+						<div class="type">国内长途</div>
+						<!-- <div class="disc">打折4.7</div> -->
+						<footer>本团旅游由张三旅行社赞助提供，截至于<time>2016-4-24</time></footer>
+					</article>
+				</figcaption>
+			</figure>
+			<figure class="tour">
+				<img src="img/5.jpg" alt="曼谷-芭提亚6日游"/>
+				<figcaption>
+					<article>
+						<header>
+							<hgroup>
+								<h2>曼谷-芭提亚6日游</h2>
+								<h3>包团特惠，超丰富景点，升级1万五一，无自费，赠送600元成人卷...</h3>
+							</hgroup>
+						</header>
+						<ol>
+							<li><mark>交通</mark>：春秋航空，杭州出发，无需转机</li>
+							<li><mark>团期</mark>：11/01，11/03，11/08...</li>
+						</ol>
+						<div class="buy">
+							<div class="price"> ￥ <strong>2864</strong><s>￥ 3980</s></div>
+							<div class="reserve"><a href="#">立即抢购</a></div>
+						</div>
+						<div class="type">国内长途</div>
+						<!-- <div class="disc">打折4.7</div> -->
+						<footer>本团旅游由张三旅行社赞助提供，截至于<time>2016-4-24</time></footer>
+					</article>
+				</figcaption>
+			</figure>
+			<figure class="tour">
+				<img src="img/6.jpg" alt="曼谷-芭提亚6日游"/>
+				<figcaption>
+					<article>
+						<header>
+							<hgroup>
+								<h2>曼谷-芭提亚6日游</h2>
+								<h3>包团特惠，超丰富景点，升级1万五一，无自费，赠送600元成人卷...</h3>
+							</hgroup>
+						</header>
+						<ol>
+							<li><mark>交通</mark>：春秋航空，杭州出发，无需转机</li>
+							<li><mark>团期</mark>：11/01，11/03，11/08...</li>
+						</ol>
+						<div class="buy">
+							<div class="price"> ￥ <strong>2864</strong><s>￥ 3980</s></div>
+							<div class="reserve"><a href="#">立即抢购</a></div>
+						</div>
+						<div class="type">国内长途</div>
+						<!-- <div class="disc">打折4.7</div> -->
+						<footer>本团旅游由张三旅行社赞助提供，截至于<time>2016-4-24</time></footer>
+					</article>
+				</figcaption>
+			</figure>
+			</div>
 			<div class="more">加载更多</div>
 		</div>
 	</div>
@@ -303,5 +377,30 @@
 		<div class="bottom">copyright ©YCKU 张三旅行社 | 苏ICP 备123456789号 | 张三经营许可证：L-YC-BACK456</div>
 	</footer>
 
+
+<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+	<script type="text/javascript" src="js/lazyload.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		// $("a").click(function(event){
+		//   event.preventDefault();
+		// });
+		$('.tag li').click(function(){
+			$(this).siblings().removeClass('actives');
+			$(this).addClass('actives');
+		});
+		$('.box a').click(function(){
+			$(this).siblings().removeClass('actives-box');
+			$(this).addClass('actives-box');
+		})
+		$('.left li').click(function(){
+			$(this).siblings().removeClass('selected');
+			$(this).addClass('selected');
+		})
+		$('.more').click(function(){
+			$('.hide-tour').show();
+		});
+	})
+	</script>
 </body>
 </html>

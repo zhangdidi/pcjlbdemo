@@ -36,24 +36,24 @@
 				<h2>景点推荐</h2>
 				<div class="tag">
 					<ul>
-						<li><a href="#">曼谷(12)</a></li>
-						<li><a href="#">东京(5)</a></li>
-						<li><a href="#">土耳其(4)</a></li>
-						<li><a href="#">西双版纳</a></li>
-						<li><a href="#">曼谷(12)</a></li>
-						<li><a href="#">东京(5)</a></li>
-						<li><a href="#">土耳其(4)</a></li>
-						<li><a href="#">西双版纳</a></li>
-						<li><a href="#">曼谷(12)</a></li>
-						<li><a href="#">东京(5)</a></li>
-						<li><a href="#">土耳其(4)</a></li>
-						<li><a href="#">西双版纳</a></li>
-						<li><a href="#">曼谷(12)</a></li>
-						<li><a href="#">东京(5)</a></li>
-						<li><a href="#">土耳其(4)</a></li>
-						<li><a href="#">西双版纳</a></li>
-						<li><a href="#">东京(5)</a></li>
-						<li><a href="#">土耳其(4)</a></li>
+						<li><a href="javascript:void(0);">曼谷(12)</a></li>
+						<li><a href="javascript:void(0);">东京(5)</a></li>
+						<li><a href="javascript:void(0);">土耳其(4)</a></li>
+						<li><a href="javascript:void(0);">西双版纳</a></li>
+						<li><a href="javascript:void(0);">曼谷(12)</a></li>
+						<li><a href="javascript:void(0);">东京(5)</a></li>
+						<li><a href="javascript:void(0);">土耳其(4)</a></li>
+						<li><a href="javascript:void(0);">西双版纳</a></li>
+						<li><a href="javascript:void(0);">曼谷(12)</a></li>
+						<li><a href="javascript:void(0);">东京(5)</a></li>
+						<li><a href="javascript:void(0);">土耳其(4)</a></li>
+						<li><a href="javascript:void(0);">西双版纳</a></li>
+						<li><a href="javascript:void(0);">曼谷(12)</a></li>
+						<li><a href="javascript:void(0);">东京(5)</a></li>
+						<li><a href="javascript:void(0);">土耳其(4)</a></li>
+						<li><a href="javascript:void(0);">西双版纳</a></li>
+						<li><a href="javascript:void(0);">东京(5)</a></li>
+						<li><a href="javascript:void(0);">土耳其(4)</a></li>
 					</ul>
 				</div>
 			</div>
@@ -98,10 +98,10 @@
 			<div class="sidebox treasure">
 				<h2>旅游百宝箱</h2>
 				<div class="box">
-					<a href="#">天气预报</a>
-					<a href="#">火车票查询</a>
-					<a href="#">航空查询</a>
-					<a href="#">地铁线路查询</a>
+					<a href="javascript:void(0);">天气预报</a>
+					<a href="javascript:void(0);">火车票查询</a>
+					<a href="javascript:void(0);">航空查询</a>
+					<a href="javascript:void(0);">地铁线路查询</a>
 				</div>
 			</div>
 
@@ -168,6 +168,22 @@
 		</div>
 		<div class="bottom">copyright ©YCKU 张三旅行社 | 苏ICP 备123456789号 | 张三经营许可证：L-YC-BACK456</div>
 	</footer>
+
+
+	<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+	
+		$('.tag li').click(function(){
+			$(this).siblings().removeClass('actives');
+			$(this).addClass('actives');
+		});
+		$('.box a').click(function(){
+			$(this).siblings().removeClass('actives-box');
+			$(this).addClass('actives-box');
+		})
+	})
+	</script>
 
 </body>
 </html>
